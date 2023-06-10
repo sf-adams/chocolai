@@ -1,12 +1,16 @@
-import './sass/style.scss';
+import Canvas from "./canvas";
+import Customiser from "./pages/Customiser";
+import Home from "./pages/Home";
+import "./sass/style.scss";
 
 function App() {
-
   return (
-    <div>
-      <h1 className="title">React App</h1>
-    </div>
-  )
+    <main className="app">
+      <Home />
+      <Canvas />
+      <Customiser />
+    </main>
+  );
 }
 
-export default App
+export default App;

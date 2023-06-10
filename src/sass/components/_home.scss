@@ -1,0 +1,80 @@
+@use "../abstracts" as *;
+
+.home {
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  padding: 6rem;
+  gap: 1.5rem;
+  z-index: 10;
+
+  @include mq(large) {
+    justify-content: space-between;
+    height: 100%;
+    padding: map-get($sizes, 24);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
+    gap: 0;
+  }
+
+  img {
+    object-fit: contain;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.home-content {
+  flex: 1;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  @include mq(large) {
+    justify-content: center;
+  }
+}
+
+.head-text {
+  font-family: $ff-base;
+  font-weight: $fw-700;
+  font-size: fs(900);
+  color: clr(neutral, 900);
+  line-height: 7rem;
+
+  @include mq(large) {
+    line-height: 11rem;
+  }
+}
+
+.break {
+  display: none;
+
+  @include mq(large) {
+    display: block;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.copy-text {
+  max-width: 28rem;
+  font-weight: $fw-400;
+  font-size: fs(300);
+  color: clr(neutral, 400);
+
+  strong {
+    font-weight: $fw-700;
+    color: clr(neutral, 900);
+  }
+}

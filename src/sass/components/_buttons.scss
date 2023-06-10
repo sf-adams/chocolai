@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+.button {
+}
+
+.hero-button {
+  width: fit-content;
+  padding: 1rem 0.625rem;
+  font-size: fs(300);
+  line-height: 1.5rem;
+  font-weight: 700;
+}
