@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 type ButtonProps = {
   type: "filled" | "outlined";
   title: string;
@@ -6,7 +8,17 @@ type ButtonProps = {
 };
 
 const Button = ({ type, title, handleClick, customClass }: ButtonProps) => {
-  return <button className={`button ${customClass}`}>{title}</button>;
+  return (
+    <button
+      className={clsx("button", customClass, {
+        "button-filled": type === "filled",
+        "button-outlined": type === "outlined",
+      })}
+      onClick={handleClick}
+    >
+      {title}
+    </button>
+  );
 };
 
 export default Button;
