@@ -10,10 +10,20 @@
   background-color: clr(primary, 400);
 }
 
+.button-outlined {
+  border: 1px solid clr(primary, 400);
+}
+
 .hero-button {
   width: fit-content;
   padding: 1rem 0.625rem;
   font-size: fs(300);
   line-height: 1.5rem;
+  font-weight: 700;
+}
+
+.back-button {
+  width: fit-content;
+  padding: 1rem 0.625rem;
   font-weight: 700;
 }

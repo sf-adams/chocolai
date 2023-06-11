@@ -1,0 +1,46 @@
+.customiser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.tab-wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.tab {
+  display: flex;
+  position: absolute;
+  left: 100%;
+  padding: 0.75rem;
+  margin-left: 0.75rem;
+  flex-direction: column;
+  border-radius: 0.375rem;
+  gap: 1rem;
+  width: 195px;
+  height: 220px;
+}
+
+.button-wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.filter-tabs-container {
+  position: absolute;
+  z-index: 10;
+  bottom: 1.25rem;
+  right: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
