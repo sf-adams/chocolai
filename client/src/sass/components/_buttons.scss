@@ -10,8 +10,12 @@
   background-color: clr(primary, 400);
 }
 
-.button-outlined {
-  border: 1px solid clr(primary, 400);
+.button-outline {
+  border-width: 1px;
+  border-style: solid;
+  border-color: clr(primary, 400);
+  background-color: transparent;
+  color: clr(primary, 400);
 }
 
 .hero-button {

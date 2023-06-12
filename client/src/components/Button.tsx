@@ -1,9 +1,9 @@
 import clsx from "clsx";
 
 type ButtonProps = {
-  type: "filled" | "outlined";
+  type: "filled" | "outline";
   title: string;
-  handleClick: () => void;
+  handleClick?: () => void;
   customClass?: string;
 };
 
@@ -12,7 +12,7 @@ const Button = ({ type, title, handleClick, customClass }: ButtonProps) => {
     <button
       className={clsx("button", customClass, {
         "button-filled": type === "filled",
-        "button-outlined": type === "outlined",
+        "button-outline": type === "outline",
       })}
       onClick={handleClick}
     >
