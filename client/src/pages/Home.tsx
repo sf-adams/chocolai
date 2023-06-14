@@ -1,13 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useSnapshot } from "valtio";
-import {
-  headContainerAnimation,
-  headContentAnimation,
-  headTextAnimation,
-  slideAnimation,
-} from "../config/motion.js";
-import state from "../store";
 import { Button } from "../components";
+import state from "../store";
+import { slideAnimation, headerVariants } from "../config/motion";
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -22,16 +17,27 @@ const Home = () => {
 
           <motion.div
             className="home-content"
-            {...headContainerAnimation}
-            {...slideAnimation("down")}
+            variants={headerVariants.container}
+            initial="initial"
+            animate="animate"
+            exit="exit"
           >
-            <motion.div {...headTextAnimation}>
+            <motion.div
+              variants={headerVariants.title}
+              initial="initial"
+              animate="animate"
+            >
               <h1 className="head-text">
                 LET'S <br className="break" /> DO IT.
               </h1>
             </motion.div>
 
-            <motion.div {...headContentAnimation} className="copy">
+            <motion.div
+              variants={headerVariants.content}
+              initial="initial"
+              animate="animate"
+              className="copy"
+            >
               <p className="copy-text">
                 Create your unique and exclusive chocolate bar with our
                 brand-new 3D customisation tool.{" "}
